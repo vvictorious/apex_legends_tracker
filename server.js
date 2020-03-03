@@ -2,8 +2,13 @@ const express = require('express');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
 
+//load env
+dotenv.config({ path: './config.env'});
+
 const app = express();
 
-app.listen(5000, () => {
-    console.log('app is listening on port 5000');
+const port = process.env.PORT || 8000
+
+app.listen(port, () => {
+    console.log(`server running in ${process.env.NODE_ENV} mode on port ${port}`);
 });
