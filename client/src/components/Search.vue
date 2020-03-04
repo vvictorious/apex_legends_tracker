@@ -32,6 +32,18 @@ export default {
     },
     beforeCreate () {
         document.body.className = "body-bg-image"
+    },
+    methods: {
+        onSubmit () {
+            if (!this.gamertag) {
+                this.$toasted.show('Please enter a gamertag', {
+                    duration: 3000,
+                    icon: "exclamation-circle"
+                })
+            } else {
+                console.log('Will redirect')
+            }
+        }
     }
 }
 </script>
