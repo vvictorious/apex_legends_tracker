@@ -1,19 +1,17 @@
 <template>
   <div class="container">
     <Header />      
-    <Search />
+    <router-view />
   </div>
 </template>
 
 <script>
   //remember to put client in the gitignore before deploying to heroku and running npm run build
   import Header from './components/Header'
-  import Search from './components/Search'
   export default {
     name: 'App',
     components: {
-      Header,
-      Search
+      Header
     }
   }
 </script>
