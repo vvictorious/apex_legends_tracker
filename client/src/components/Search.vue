@@ -41,7 +41,7 @@ export default {
                     icon: "exclamation-circle"
                 })
             } else {
-                console.log('Will redirect')
+                this.$router.push(`/profile/${this.platform}/${this.gamertag}`)
             }
         }
     }
